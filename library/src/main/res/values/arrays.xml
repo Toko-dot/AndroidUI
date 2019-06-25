@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_ui">
+        <item>尺子</item>
+        <item>点心</item>
+        <item>文字缩放</item>
+        <item>图片抖动</item>
+    </string-array>
+</resources>

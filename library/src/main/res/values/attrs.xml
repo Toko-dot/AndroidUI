@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RuleView">
+        <attr name="textsize" format="dimension"></attr>
+        <attr name="ruletextsize" format="dimension"></attr>
+        <attr name="maxdegreeCount" format="integer"></attr>
+        <attr name="degreewidth" format="dimension"></attr>
+        <attr name="unit" format="string"></attr>
+        <attr name="unitsize" format="dimension"></attr>
+        <attr name="colorhigh" format="color"/>
+        <attr name="colorlow" format="color"/>
+        <attr name="colormark" format="color"/>
+        <attr name="colortrule" format="color"/>
+        <attr name="colorRulemark" format="color"/>
+        <attr name="colorRule" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="IntroductionView">
+        <attr name="showLines" format="integer"/>
+        <attr name="text" format="string"/>
+    </declare-styleable>
+</resources>
