@@ -21,7 +21,8 @@
             android:screenOrientation="portrait" />
         <activity android:name="com.czy.demo.HeartActivity" />
         <activity android:name="com.czy.demo.IntroductionActivity" />
-        <activity android:name="com.czy.demo.ShakeImgActivity"></activity>
+        <activity android:name="com.czy.demo.ShakeImgActivity" />
+        <activity android:name="com.czy.demo.FlowLayoutActivity"></activity>
     </application>
 
 </manifest>

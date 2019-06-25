@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity() {
                   datas.get(3)->{
                       startActivity(Intent(this@MainActivity,ShakeImgActivity::class.java))
                   }
+                  datas.get(4)->{
+                      startActivity(Intent(this@MainActivity,FlowLayoutActivity::class.java))
+                  }
               }
         }
     }
