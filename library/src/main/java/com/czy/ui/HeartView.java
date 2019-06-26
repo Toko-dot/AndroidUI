@@ -52,6 +52,7 @@ public class HeartView extends View {
         super(context, attrs);
         paint = new Paint();
         paint.setAntiAlias(true);
+
     }
 
     @Override

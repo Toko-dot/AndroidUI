@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.czy.demo.MainActivity">
+        <activity android:name="com.czy.demo.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,12 +17,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.czy.demo.RuleActivity"
+            android:name="com.czy.demo.activity.RuleActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.czy.demo.HeartActivity" />
-        <activity android:name="com.czy.demo.IntroductionActivity" />
-        <activity android:name="com.czy.demo.ShakeImgActivity" />
-        <activity android:name="com.czy.demo.FlowLayoutActivity"></activity>
+        <activity android:name="com.czy.demo.activity.HeartActivity" />
+        <activity android:name="com.czy.demo.activity.IntroductionActivity" />
+        <activity android:name="com.czy.demo.activity.ShakeImgActivity" />
+        <activity android:name="com.czy.demo.activity.FlowLayoutActivity" />
+        <activity android:name="com.czy.demo.activity.QQCardActivity"></activity>
     </application>
 
 </manifest>

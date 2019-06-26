@@ -17,12 +17,12 @@ class CardView(context: Context, attributeSet: AttributeSet) : FrameLayout(conte
     companion object {
         val CARD_ROTATION_DEGREES=90
     }
+
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event?.action) {
             MotionEvent.ACTION_DOWN -> {
                 downPoint = Point(event.rawX, event.rawY)
                 prePoint = Point(event.rawX, event.rawY)
-
             }
             MotionEvent.ACTION_MOVE -> {
                 val dx = event.rawX - prePoint.x
@@ -36,16 +36,18 @@ class CardView(context: Context, attributeSet: AttributeSet) : FrameLayout(conte
 
                 rotation = CARD_ROTATION_DEGREES*translationX/width
                 alpha=1-Math.abs(translationX/width)
-
             }
             MotionEvent.ACTION_UP->{
-                translationX=0f
-                translationY=0f
-                rotation=0f
-                alpha=1f
+
+                    translationX = 0f
+                    translationY = 0f
+                    rotation = 0f
+                    alpha = 1f
+                    return true
+
             }
         }
-        return return true
+        return super.onTouchEvent(event)
     }
     data class Point(var x: Float, var y: Float)
 }

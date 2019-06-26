@@ -196,7 +196,7 @@ public class RuleView extends View {
 
         isDrawed = true;
     }
-
+    //画笔大小检查
     private void checkPaintTextSize(Paint paint, float height) {
         Rect rbounds = new Rect();
         paint.getTextBounds("0123456789", 0, "0123456789".length(), rbounds);

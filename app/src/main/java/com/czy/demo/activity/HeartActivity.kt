@@ -1,13 +1,13 @@
-package com.czy.demo
+package com.czy.demo.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.czy.ui.R
 
-class RuleActivity : AppCompatActivity() {
+class HeartActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rule)
+        setContentView(R.layout.activity_heart)
     }
 }
