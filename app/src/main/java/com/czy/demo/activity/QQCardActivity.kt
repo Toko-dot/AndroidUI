@@ -5,14 +5,17 @@ import android.animation.AnimatorListenerAdapter
 import android.animation.ObjectAnimator
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
 import android.view.View
 import com.czy.demo.QQLayoutManager
 import com.czy.demo.adapter.UiListAdapter
+import com.czy.demo.logs
 import com.czy.demo.toast
 import com.czy.ui.R
 import kotlinx.android.synthetic.main.activity_qqcard.*
+import java.util.*
 import kotlin.properties.Delegates
 
 class QQCardActivity : AppCompatActivity() {
@@ -30,8 +33,9 @@ class QQCardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_qqcard)
         rv_card.layoutManager = QQLayoutManager(this)
+
         rv_card.adapter = adapter
-        datas = resources.getStringArray(R.array.card_list).toList() as ArrayList<String>
+        datas = resources.getStringArray(R.array.list_card).toList() as ArrayList<String>
 
         itemTouchHelper.attachToRecyclerView(rv_card)
 
@@ -84,9 +88,8 @@ class QQCardActivity : AppCompatActivity() {
     }
 
 
-    val itemTouchHelper=ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.DOWN or ItemTouchHelper.UP or ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
+    val itemTouchHelper=ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(ItemTouchHelper.DOWN or ItemTouchHelper.UP or ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT, 0) {
         override fun onMove(recyclerView: RecyclerView?, viewHolder: RecyclerView.ViewHolder?, target: RecyclerView.ViewHolder?): Boolean {
-            adapter.notifyDataSetChanged()
             return false
         }
 
@@ -95,6 +98,8 @@ class QQCardActivity : AppCompatActivity() {
             adapter.datas = datas
             adapter.notifyDataSetChanged()
         }
+
+
 
     })
 }

@@ -7,8 +7,9 @@
         <item>图片抖动</item>
         <item>流式布局</item>
         <item>选项卡</item>
+        <item>管理布局</item>
     </string-array>
-    <string-array name="card_list">
+    <string-array name="list_card">
         <item>这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦</item>
         <item>这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦</item>
         <item>这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦</item>
@@ -29,6 +30,17 @@
         <item>这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦</item>
         <item>这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦</item>
         <item>这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦</item>
+    </string-array>
 
+    <string-array name="list_manager_layout">
+        <item>首页</item>
+        <item>电影</item>
+        <item>电视剧</item>
+        <item>综艺</item>
+        <item>动漫</item>
+        <item>游戏</item>
+        <item>体育</item>
+        <item>教育</item>
     </string-array>
+
 </resources>

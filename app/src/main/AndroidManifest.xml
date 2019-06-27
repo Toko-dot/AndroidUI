@@ -23,7 +23,8 @@
         <activity android:name="com.czy.demo.activity.IntroductionActivity" />
         <activity android:name="com.czy.demo.activity.ShakeImgActivity" />
         <activity android:name="com.czy.demo.activity.FlowLayoutActivity" />
-        <activity android:name="com.czy.demo.activity.QQCardActivity"></activity>
+        <activity android:name="com.czy.demo.activity.QQCardActivity" />
+        <activity android:name="com.czy.demo.activity.ManagerLayoutActivity"></activity>
     </application>
 
 </manifest>

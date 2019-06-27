@@ -20,17 +20,16 @@ class MainActivity : AppCompatActivity() {
         UiListAdapter(this, datas, R.layout.layout_item_ui) {
             when (it) {
                 datas.get(0) -> {
-                    startActivity(Intent(this@MainActivity, RuleActivity::class.java))
+                    startActivity<RuleActivity>()
                 }
                 datas.get(1) -> {
-                    startActivity(Intent(this@MainActivity, HeartActivity::class.java))
+                    startActivity<HeartActivity>()
                 }
                 datas.get(2) -> {
-                    startActivity(Intent(this@MainActivity, IntroductionActivity::class.java))
-
+                    startActivity<IntroductionActivity>()
                 }
                 datas.get(3) -> {
-                    startActivity(Intent(this@MainActivity, ShakeImgActivity::class.java))
+                    startActivity<ShakeImgActivity>()
                 }
                 datas.get(4) -> {
                     startActivity<FlowLayoutActivity>()
@@ -38,6 +37,10 @@ class MainActivity : AppCompatActivity() {
                 datas.get(5) -> {
                     startActivity<QQCardActivity>()
                 }
+                datas.get(6)->{
+                    startActivity<ManagerLayoutActivity>()
+                }
+
             }
         }
     }

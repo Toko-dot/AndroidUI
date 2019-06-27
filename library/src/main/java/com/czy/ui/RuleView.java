@@ -138,6 +138,7 @@ public class RuleView extends View {
     }
 
 
+
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawColor(Color.WHITE);
