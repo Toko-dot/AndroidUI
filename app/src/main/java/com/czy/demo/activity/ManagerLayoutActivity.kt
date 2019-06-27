@@ -6,9 +6,9 @@ import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
 import com.czy.demo.QQLayoutManager
+import com.czy.demo.R
 import com.czy.demo.adapter.UiListAdapter
 import com.czy.demo.logs
-import com.czy.ui.R
 import kotlinx.android.synthetic.main.activity_manager_layout.*
 import kotlinx.android.synthetic.main.activity_qqcard.*
 import java.util.*

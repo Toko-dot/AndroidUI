@@ -10,10 +10,10 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
 import android.view.View
 import com.czy.demo.QQLayoutManager
+import com.czy.demo.R
 import com.czy.demo.adapter.UiListAdapter
 import com.czy.demo.logs
 import com.czy.demo.toast
-import com.czy.ui.R
 import kotlinx.android.synthetic.main.activity_qqcard.*
 import java.util.*
 import kotlin.properties.Delegates
@@ -88,7 +88,7 @@ class QQCardActivity : AppCompatActivity() {
     }
 
 
-    val itemTouchHelper=ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(ItemTouchHelper.DOWN or ItemTouchHelper.UP or ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT, 0) {
+    val itemTouchHelper=ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.DOWN or ItemTouchHelper.UP or ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
         override fun onMove(recyclerView: RecyclerView?, viewHolder: RecyclerView.ViewHolder?, target: RecyclerView.ViewHolder?): Boolean {
             return false
         }
@@ -98,8 +98,5 @@ class QQCardActivity : AppCompatActivity() {
             adapter.datas = datas
             adapter.notifyDataSetChanged()
         }
-
-
-
     })
 }

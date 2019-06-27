@@ -2,7 +2,7 @@ package com.czy.demo.adapter
 
 import android.content.Context
 import android.widget.TextView
-import com.czy.ui.R
+import com.czy.demo.R
 
 /**
  * Created by Administrator on 2019/6/25.

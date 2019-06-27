@@ -12,7 +12,7 @@ import com.czy.demo.logs
  */
 abstract class BaseRvAdapter<T>(val context: Context, var datas: ArrayList<T> = arrayListOf(), val layout: Int) : RecyclerView.Adapter<BaseRvAdapter<T>.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         logs("onCreateViewHolder")
         val view = LayoutInflater.from(context).inflate(layout, parent, false)
         return ViewHolder(view)

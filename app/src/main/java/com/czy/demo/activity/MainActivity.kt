@@ -1,17 +1,22 @@
 package com.czy.demo.activity
 
+import android.arch.lifecycle.Lifecycle
+import android.arch.lifecycle.LifecycleObserver
+import android.arch.lifecycle.OnLifecycleEvent
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import com.czy.demo.R
 import com.czy.demo.adapter.UiListAdapter
+import com.czy.demo.logs
 import com.czy.demo.startActivity
-import com.czy.ui.R
+
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.properties.Delegates
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() ,LifecycleObserver{
     private var datas by Delegates.observable(ArrayList<String>()) { property, oldValue, newValue ->
         adapter.datas = newValue;
         adapter.notifyDataSetChanged()
@@ -46,17 +51,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        logs("onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         rv_ui.layoutManager = LinearLayoutManager(this)
         rv_ui.adapter = adapter
         datas = resources.getStringArray(R.array.list_ui).toList() as ArrayList<String>
-
+        lifecycle.addObserver(this)
     }
-
-    fun onNotify(view: View) {
-        adapter.notifyDataSetChanged()
-    }
-
 
 }

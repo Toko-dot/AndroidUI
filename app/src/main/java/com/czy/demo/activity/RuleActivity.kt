@@ -2,7 +2,7 @@ package com.czy.demo.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.czy.ui.R
+import com.czy.demo.R
 
 class RuleActivity : AppCompatActivity() {
 
