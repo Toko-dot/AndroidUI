@@ -11,6 +11,7 @@ import android.support.v7.widget.helper.ItemTouchHelper
 import android.view.View
 import com.czy.demo.QQLayoutManager
 import com.czy.demo.R
+import com.czy.demo.adapter.MeiNvListAdapter
 import com.czy.demo.adapter.UiListAdapter
 import com.czy.demo.logs
 import com.czy.demo.toast
@@ -23,8 +24,8 @@ class QQCardActivity : AppCompatActivity() {
         adapter.datas = newValue;
         adapter.notifyDataSetChanged()
     }
-    private val adapter: UiListAdapter by lazy {
-        UiListAdapter(this, datas, R.layout.layout_item_ui) {
+    private val adapter: MeiNvListAdapter by lazy {
+        MeiNvListAdapter(this, datas, R.layout.layout_item_meinv) {
 
         }
     }
@@ -35,7 +36,7 @@ class QQCardActivity : AppCompatActivity() {
         rv_card.layoutManager = QQLayoutManager(this)
 
         rv_card.adapter = adapter
-        datas = resources.getStringArray(R.array.list_card).toList() as ArrayList<String>
+        datas = resources.getStringArray(R.array.list_meinv).toList() as ArrayList<String>
 
         itemTouchHelper.attachToRecyclerView(rv_card)
 
@@ -56,7 +57,7 @@ class QQCardActivity : AppCompatActivity() {
             }
             override fun onAnimationEnd(animation: Animator?) {
                 super.onAnimationEnd(animation)
-                adapter.datas.removeAt(rv_card.childCount - 1)
+                adapter.datas.removeAt(adapter.datas.size-1)
                 adapter.notifyDataSetChanged()
                 view.isEnabled=true
             }
@@ -78,7 +79,7 @@ class QQCardActivity : AppCompatActivity() {
             }
             override fun onAnimationEnd(animation: Animator?) {
                 super.onAnimationEnd(animation)
-                adapter.datas.removeAt(rv_card.childCount - 1)
+                adapter.datas.removeAt(adapter.datas.size-1)
                 adapter.notifyDataSetChanged()
                 view.isEnabled=true
             }

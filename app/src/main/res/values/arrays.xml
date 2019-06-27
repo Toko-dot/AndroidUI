@@ -43,4 +43,13 @@
         <item>教育</item>
     </string-array>
 
+    <string-array name="list_meinv">
+        <item>https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1561641069638&amp;di=172e249042a95510b46af12460d27098&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Fsports%2F20161220%2FH4Uw-fxytqax6757480.jpg</item>
+        <item>https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1561641069637&amp;di=e7992376471401e02f6d87d0a9fa32ba&amp;imgtype=0&amp;src=http%3A%2F%2Fd-pic-image.yesky.com%2F1080x-%2FuploadImages%2F2019%2F044%2F59%2F1113V6L3Q6TY.jpg</item>
+        <item>http://d-pic-image.yesky.com/740x-/uploadImages/2018/225/22/JMU8L41SQ8PK.jpg</item>
+        <item>http://d-pic-image.yesky.com/740x-/uploadImages/2018/177/10/8JL25OY31H07.jpg</item>
+        <item>http://pic-image.yesky.com/uploadImages/2018/157/40/5Z12J1141780.jpg</item>
+        <item>http://pic-image.yesky.com/uploadImages/2015/323/05/66203P598I1Z.jpg</item>
+    </string-array>
+
 </resources>

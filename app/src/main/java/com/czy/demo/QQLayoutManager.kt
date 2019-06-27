@@ -47,7 +47,7 @@ class QQLayoutManager(val context: Context) : RecyclerView.LayoutManager() {
                 addView(view)
                 measureChildWithMargins(view, 0, 0)
 
-                view?.layout(paddingLeft, paddingTop + height / 2 - getDecoratedMeasuredHeight(view) / 2, getDecoratedMeasuredWidth(view), height / 2 + getDecoratedMeasuredHeight(view) / 2)
+                view?.layout((width-paddingLeft-paddingRight)/2-getDecoratedMeasuredWidth(view)/2, (height-paddingTop-paddingBottom) / 2 - getDecoratedMeasuredHeight(view) / 2, (width-paddingLeft-paddingRight)/2+getDecoratedMeasuredWidth(view)/2, (height-paddingTop-paddingBottom) / 2 + getDecoratedMeasuredHeight(view) / 2)
 
                 view?.translationX = count * 10f
                 view?.translationY = count * 10f
@@ -62,8 +62,7 @@ class QQLayoutManager(val context: Context) : RecyclerView.LayoutManager() {
                 val view = recycler?.getViewForPosition(i)
                 addView(view)
                 measureChildWithMargins(view, 0, 0)
-                view?.layout(paddingLeft, paddingTop + height / 2 - getDecoratedMeasuredHeight(view) / 2, getDecoratedMeasuredWidth(view), height / 2 + getDecoratedMeasuredHeight(view) / 2)
-
+                view?.layout((width-paddingLeft-paddingRight)/2-getDecoratedMeasuredWidth(view)/2, (height-paddingTop-paddingBottom) / 2 - getDecoratedMeasuredHeight(view) / 2, (width-paddingLeft-paddingRight)/2+getDecoratedMeasuredWidth(view)/2, (height-paddingTop-paddingBottom) / 2 + getDecoratedMeasuredHeight(view) / 2)
                 view?.translationX = count * 10f
                 view?.translationY = count * 10f
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

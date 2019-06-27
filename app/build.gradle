@@ -32,4 +32,5 @@ dependencies {
     implementation "android.arch.navigation:navigation-fragment:$nav_version"
     implementation "android.arch.navigation:navigation-ui:$nav_version"
     androidTestImplementation "android.arch.navigation:navigation-testing:$nav_version"
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
 }

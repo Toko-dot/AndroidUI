@@ -14,6 +14,7 @@ class UiListAdapter( context: Context,  datas: ArrayList<String>, layout: Int,va
         holder.itemView.setOnClickListener {
             listener.invoke(data)
         }
+
     }
 
 }
