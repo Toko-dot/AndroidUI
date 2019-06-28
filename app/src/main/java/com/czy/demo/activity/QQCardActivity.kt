@@ -9,12 +9,9 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
 import android.view.View
-import com.czy.demo.QQLayoutManager
-import com.czy.demo.R
+import com.czy.demo.*
 import com.czy.demo.adapter.MeiNvListAdapter
 import com.czy.demo.adapter.UiListAdapter
-import com.czy.demo.logs
-import com.czy.demo.toast
 import kotlinx.android.synthetic.main.activity_qqcard.*
 import java.util.*
 import kotlin.properties.Delegates
@@ -48,7 +45,7 @@ class QQCardActivity : AppCompatActivity() {
             toast("没有了")
             return
         }
-        val childAt = rv_card.getChildAt(rv_card.childCount - 1)
+        val childAt = rv_card.layoutManager.findViewByPosition(adapter.datas.size-1)?:return
         val animator = ObjectAnimator.ofFloat(childAt, "x", childAt.x, childAt.width.toFloat())
         animator.addListener(object :AnimatorListenerAdapter(){
             override fun onAnimationStart(animation: Animator?) {
@@ -70,7 +67,9 @@ class QQCardActivity : AppCompatActivity() {
             toast("没有了")
             return
         }
-        val childAt = rv_card.getChildAt(rv_card.childCount - 1)
+        val childAt = rv_card.layoutManager.findViewByPosition(adapter.datas.size-1)?:return
+
+
         val animator = ObjectAnimator.ofFloat(childAt, "x", childAt.x, -childAt.width.toFloat())
         animator.addListener(object :AnimatorListenerAdapter(){
             override fun onAnimationStart(animation: Animator?) {
@@ -95,6 +94,7 @@ class QQCardActivity : AppCompatActivity() {
         }
 
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+            logs("${viewHolder.layoutPosition},${viewHolder.adapterPosition}")
             datas.removeAt(viewHolder.layoutPosition)
             adapter.datas = datas
             adapter.notifyDataSetChanged()

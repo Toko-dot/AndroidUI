@@ -7,7 +7,9 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.PagerSnapHelper
 import android.view.View
+import com.czy.demo.NavigationLayoutManager
 import com.czy.demo.R
 import com.czy.demo.adapter.UiListAdapter
 import com.czy.demo.logs
@@ -54,8 +56,11 @@ class MainActivity : AppCompatActivity() ,LifecycleObserver{
         logs("onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        rv_ui.layoutManager = LinearLayoutManager(this)
+        rv_ui.layoutManager = NavigationLayoutManager(this)
         rv_ui.adapter = adapter
+        val snapHelper = PagerSnapHelper()
+        snapHelper.attachToRecyclerView(rv_ui)
+
         datas = resources.getStringArray(R.array.list_ui).toList() as ArrayList<String>
         lifecycle.addObserver(this)
     }

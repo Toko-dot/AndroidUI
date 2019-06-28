@@ -75,4 +75,9 @@ class QQLayoutManager(val context: Context) : RecyclerView.LayoutManager() {
 
     }
 
+    override fun onDetachedFromWindow(view: RecyclerView?, recycler: RecyclerView.Recycler?) {
+        super.onDetachedFromWindow(view, recycler)
+        removeAndRecycleAllViews(recycler)
+    }
+
 }
