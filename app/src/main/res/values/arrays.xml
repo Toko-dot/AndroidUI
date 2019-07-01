@@ -8,6 +8,7 @@
         <item>流式布局</item>
         <item>选项卡</item>
         <item>管理布局</item>
+        <item>画廊布局</item>
     </string-array>
     <string-array name="list_card">
         <item>这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦这是一个可以收缩的文字显示控件，可以指定缩放的最小行数哦</item>
@@ -52,4 +53,10 @@
         <item>http://pic-image.yesky.com/uploadImages/2015/323/05/66203P598I1Z.jpg</item>
     </string-array>
 
+    <string-array name="list_type_ui">
+        <item>View</item>
+        <item>ViewGroup</item>
+        <item>RecyclerView</item>
+        <item>ViewPager</item>
+    </string-array>
 </resources>

@@ -47,7 +47,9 @@ class MainActivity : AppCompatActivity() ,LifecycleObserver{
                 datas.get(6)->{
                     startActivity<ManagerLayoutActivity>()
                 }
-
+                datas.get(7)->{
+                    startActivity<ViewPagerActivity>()
+                }
             }
         }
     }
